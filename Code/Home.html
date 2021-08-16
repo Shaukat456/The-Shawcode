@@ -65,7 +65,7 @@
         
         <div class="intro" id='intro'>
             <div class="Name">
-                <h1>GO DIGITAL</h1>
+                <h1>The Shaw Code</h1>
                 <h2>By SHAUKAT SOHAIL</h2>
             </div>
             <!-- <button> Start Exploring </button> -->
@@ -103,7 +103,7 @@ Lorem ipsum dolor sit amet consectetur, adipisicing elit. A necessitatibus inven
     </div>
 
     
-     <div class="contact">
+     <!-- <div class="contact">
         <h1>Contact Us </h1>
 
         <div class="info">
@@ -114,17 +114,17 @@ Lorem ipsum dolor sit amet consectetur, adipisicing elit. A necessitatibus inven
 
         <div class="form">
 
-            <!-- <form action="">
+          <form action="">
             <input type="text " placeholder="Name" >            
             <input type="text " placeholder="Email" >            
             <input type="text" placeholder="WRITE US" >             -->
                 <!-- <button>  Send </button> --> 
-            </form>
-        </div>
+                <!-- </form>
+            </div>
 
-    </div>
-     
-    </div>
+        </div>
+        
+        </div>  -->
 
     <div class="about" id='about'>
         <div class="img">
@@ -159,6 +159,17 @@ Lorem ipsum dolor sit amet consectetur, adipisicing elit. A necessitatibus inven
         preloader.style.display='none'
     }
 
+
+    const IntroH1=document.querySelector('.intro h1');
+    console.log(IntroH1);
+
+    IntroH1.addEventListener("click",(letter)=>{
+       IntroH1.classList.add('anim')
+    })
+    // intro.addEventListener("click",(letter)=>{
+    //    let node= intro.childNodes[2]
+    //    console.log(node)
+    // })
 
 </script>
 </html>

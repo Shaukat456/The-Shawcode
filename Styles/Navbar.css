@@ -3,6 +3,7 @@
     background: rgb(3, 110, 84);
     position: fixed;
     width: 100vw;
+    /* z-index: ; */
 }
 
 .navbar ul{
@@ -23,6 +24,10 @@
 .navbar a{
     text-decoration: none;
     margin: 5%;
+}
+.navbar li:hover {
+    color: wheat;
+    transform: skewY(4deg);
 }
 
 @media screen {
