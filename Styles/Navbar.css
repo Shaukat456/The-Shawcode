@@ -1,0 +1,27 @@
+.navbar{
+    display: flex;
+    background: rgb(3, 110, 84);
+    position: fixed;
+    width: 100vw;
+}
+
+.navbar ul{
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+.navbar  li{
+    /* margin: 5%; */
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    list-style: none;
+}
+.navbar img{
+    display: none;
+    justify-content: center;
+    background: url('../Images/_MG_0008.JPG') no-repeat center/cover    ;
+}
+.navbar a{
+    text-decoration: none;
+    margin: 5%;
+}
+

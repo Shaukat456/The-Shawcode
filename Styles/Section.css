@@ -1,0 +1,18 @@
+.Services{
+    display: flex;
+    color: white;
+    margin: 2%;
+    padding: 6% 5%;
+}
+.Services section{
+    padding: 2% ;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.Services h1{
+    font-size: 3.2rem;
+}
+
+.Websites{
+    
+}
