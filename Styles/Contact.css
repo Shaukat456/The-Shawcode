@@ -1,0 +1,27 @@
+.contact{
+    color: white;
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+}
+.contact h1{
+    font-size: 4rem;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: flex-start;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* text-align: center; */
+
+}
+.form input{
+
+    display: block;
+    margin: 1%;
+}

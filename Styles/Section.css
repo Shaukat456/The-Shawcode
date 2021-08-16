@@ -1,18 +1,26 @@
 .Services{
     display: flex;
     color: white;
+    justify-content: center;
+    align-items: center ;
     margin: 2%;
     padding: 6% 5%;
 }
 .Services section{
     padding: 2% ;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-
+    
 }
 .Services h1{
+    text-align: center;
     font-size: 3.2rem;
 }
 
-.Websites{
-    
+.Services::before{
+    content: '';
+    position: absolute;
+    background: url('../Images/_MG_0006.JPG') no-repeat center;
+    height: 30vh;
+/* width: auto; */
+    z-index: 1;
 }

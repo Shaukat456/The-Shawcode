@@ -8,7 +8,11 @@
    <link rel="stylesheet" href="/Styles/Navbar.css">
    <link rel="stylesheet" href="/Styles/Intro.css">
    <link rel="stylesheet" href="/Styles/Section.css">
+   <link rel="stylesheet" href="/Styles/Contact.css">
 <style>
+    *{
+        transition: all .7s ease;
+    }
     html{
         scroll-behavior: smooth;
     }
@@ -21,6 +25,16 @@
     background: rgb(0, 41, 31);
 
     }
+    footer{
+        text-align: center;
+        background-color: rgb(6, 120, 148);
+        color:rgb(255, 255, 255);
+        padding: 1%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .navbarScroll{
+        color: gainsboro;
+    }
 </style>
     
 </head>
@@ -28,7 +42,7 @@
     <div>
 
 
-        <div class="navbar">
+        <div class="navbar" id='navbar'>
             <ul>
              <a href="#intro"  activeClassName='' >   <li>HOME</li> </a>   
               <a href="#Services"  activeClassName=''  >    <li>SERVICES</li> </a>              
@@ -79,17 +93,46 @@ Lorem ipsum dolor sit amet consectetur, adipisicing elit. A necessitatibus inven
     </div>
 
     
-    <!-- <div class="contact">
+     <div class="contact">
         <h1>Contact Us </h1>
-        <form action="">
-            
 
-        </form>
+        <div class="info">
+            <h5> CALL US : 03341212862</h5>
+            <h5> EMAIL US : shaukatfullstack134@gmail.com</h5>
+        </div>
+
+
+        <div class="form">
+
+            <!-- <form action="">
+            <input type="text " placeholder="Name" >            
+            <input type="text " placeholder="Email" >            
+            <input type="text" placeholder="WRITE US" >             -->
+                <!-- <button>  Send </button> --> 
+            </form>
+        </div>
 
     </div>
-     -->
+     
+    </div>
+    <div class="buttonToUp">
+        <a href="#intro"  > 
+    <!-- <i>HAHAHHA</i> -->
+
+
+        </a>
     </div>
 
+
+    <footer >
+        DESIGNED & DEVELOPED BY SHAUKAT SOHAIL
+    </footer>
     
 </body>
+<script>
+    const navbar=document.getElementById('navbar');
+
+
+
+</script>
 </html>

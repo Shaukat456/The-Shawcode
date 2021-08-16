@@ -25,3 +25,11 @@
     margin: 5%;
 }
 
+@media screen {
+    .navbar{
+        /* display: flex; */
+        /* justify-content: center; */
+         /* flex-direction: column; */
+    }
+}
+
