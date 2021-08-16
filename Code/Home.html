@@ -35,10 +35,20 @@
     .navbarScroll{
         color: gainsboro;
     }
+    .preloader{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        background-color: rgb(0, 0, 0);
+    }
 </style>
     
 </head>
-<body>
+<body onload="hide()">
+    <div class="preloader">
+        Ruko Zara , Sabr karo 
+    </div>
     <div>
 
 
@@ -56,7 +66,7 @@
         <div class="intro" id='intro'>
             <div class="Name">
                 <h1>GO DIGITAL</h1>
-                <h2>By Teen Developer.io</h2>
+                <h2>By SHAUKAT SOHAIL</h2>
             </div>
             <!-- <button> Start Exploring </button> -->
         </div>
@@ -115,6 +125,18 @@ Lorem ipsum dolor sit amet consectetur, adipisicing elit. A necessitatibus inven
     </div>
      
     </div>
+
+    <div class="about" id='about'>
+        <div class="img">
+            <h1>SHAUKAT SOHAIL</h1>
+            <img src="../Images/_MG_0041.JPG" alt="">
+            <p>Shaukat Sohail is a  <strong>Full Stack Developer</strong> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus voluptatum, accusantium voluptates et illum excepturi, quo nam maxime nisi delectus fuga corrupti, quis praesentium consequatur nobis? Commodi repellendus libero eos voluptatum? Numquam, quis eum tenetur excepturi sequi distinctio, iure reiciendis hic recusandae necessitatibus, cupiditate et accusamus quos perferendis unde voluptate placeat minus eos autem possimus esse. Assumenda iste enim, repudiandae aspernatur tempora dolores esse excepturi at ipsa doloremque laborum corrupti maxime eaque eos quibusdam suscipit placeat temporibus. Aut aspernatur sed exercitationem autem itaque velit nihil, dicta ratione id nesciunt nobis Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus consequatur beatae dolorum vero excepturi fugiat aspernatur eaque rem harum nemo earum ad, exercitationem alias dolore rerum est omnis commodi temporibus fuga. Vero dolorum nobis sint iusto, alias incidunt. Vero, suscipit autem? Illum iusto unde, similique eum qui aspernatur sunt ratione in cumque cum rerum quam, doloribus beatae debitis repellendus reprehenderit aliquam eius assumenda minus necessitatibus sapiente eveniet ipsam. Iste distinctio vitae voluptas voluptate maxime, maiores provident mollitia numquam illo natus, quae similique eos tempora. Possimus delectus sunt suscipit exercitationem incidunt. Voluptatibus ullam sapiente doloremque quo excepturi repellendus cum soluta quos!
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis in, eius, natus ea dolor iure molestias rem itaque labore enim, dolores et repudiandae non dolorum blanditiis officia odio aspernatur? Doloribus, dolorem fuga exercitationem dolores quisquam voluptatem totam vel veritatis omnis!  cum repellendus quo! Debitis, labore dolore ea in totam mollitia?</p>
+        </div>
+        
+    </div>
+
+
     <div class="buttonToUp">
         <a href="#intro"  > 
     <!-- <i>HAHAHHA</i> -->
@@ -125,13 +147,17 @@ Lorem ipsum dolor sit amet consectetur, adipisicing elit. A necessitatibus inven
 
 
     <footer >
-        DESIGNED & DEVELOPED BY SHAUKAT SOHAIL
+        DESIGNED & DEVELOPED by SHAUKAT SOHAIL
     </footer>
     
 </body>
 <script>
     const navbar=document.getElementById('navbar');
-
+    const preloader=document.querySelector(".preloader");
+    // console.log(preloader)
+    function hide(){
+        preloader.style.display='none'
+    }
 
 
 </script>

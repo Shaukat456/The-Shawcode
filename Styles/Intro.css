@@ -28,3 +28,40 @@ button{
     height: auto;
     width: auto;
 }
+.about {
+    display: flex;
+    z-index: -4;
+    justify-content: center;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.about h1{
+    font-size: 4rem;
+}
+.about img{
+    border: 2px solid white;
+    border-radius: 50% 60% 60% 70%;
+    width: auto;
+    height: 60vh;
+}
+
+
+
+@media (max-width:1040px) {
+        .navbar{
+            width: 100%;
+            /* display: flex; */
+            justify-content: center;
+        }
+        .Services{
+            display: flex;
+            flex-direction: column;
+        }
+        .Name{
+            margin-top: 5%;
+            padding: 2%;
+        }
+        .Name h1{
+            font-size: 4rem;
+        }
+}
