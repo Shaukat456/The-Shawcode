@@ -51,10 +51,34 @@ button{
     font-size: 4rem;
 }
 .about img{
-    border: 2px solid white;
     border-radius: 50% 60% 60% 70%;
     width: auto;
     height: 60vh;
+    border: 2px solid white;
+
+    animation: d 5s ease  infinite;
+}
+@keyframes d {
+    10%{
+        border-radius: 60% 30%;
+    }
+    50%{
+    border-radius: 70% 70%;
+
+    }
+    70%{
+    border-radius: 80%  210%;
+
+    }
+    90%{
+    border-radius: 60%  100%;
+
+    }
+   100%{
+       border-radius: 50% 60% 60% 70%;
+       
+} 
+
 }
 .about h1::first-letter{
     font-size: 8rem;
@@ -137,3 +161,4 @@ button{
         padding: 5%;
     }
 }
+
