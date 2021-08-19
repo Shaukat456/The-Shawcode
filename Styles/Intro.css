@@ -36,20 +36,75 @@ button{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    color: white;
+    color:wheat;
+    /* background-color: bisque; */
+    background-color: #1e4b5a;
+
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .about p{
     /* border: 2px solid white; */
     /* border-radius: 5%; */
-    font-family:cursive;
+    /* font-family:cursive; */
     font-size: 1.4rem;
+    z-index: -100;
+
+
+
+
+
 
 }
+
+
+
+
 .about h1{
     font-size: 4rem;
 }
+.about h1::first-letter{
+    font-size: 8rem;
+    /* border: 2px solid white; */
+    /* background-color: saddlebrown; */
+    color: rgb(74, 146, 7);
+    animation-name: sas;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}@keyframes sas{
+    50%{
+        transform: skew(601deg);
+    }
+    70%{
+        transform: skew(10deg);
+    }
+    100%{
+        transform: skew(0deg);
+
+    }
+
+
+
+
+
+
+    
+}
+.anim{
+    animation-name: ss;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}@keyframes ss{
+    from{
+        transform: skew(60deg);
+    }
+    to{
+        transform: skew(0deg);
+    }
+}
+
 .about img{
     border-radius: 50% 60% 60% 70%;
     width: auto;
@@ -80,18 +135,7 @@ button{
 } 
 
 }
-.about h1::first-letter{
-    font-size: 8rem;
-    /* border: 2px solid white; */
-    /* background-color: saddlebrown; */
-    color: rgb(74, 146, 7);
-}
-.anim{
-    animation-name: ss;
-    animation-timing-function: ease-in;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
-}
+
 @keyframes ss{
     from {
         
@@ -103,62 +147,81 @@ button{
     }
 }
 
+/* desktop */
 
-
-@media (max-width:1040px) {
+@media (min-width:1040px) {
         .navbar{
-            width: 100%;
-            /* display: flex; */
-            justify-content: center;
+          
         }
         .Services{
-            display: flex;
-            flex-direction: column;
+
+         /* flex-direction: column; */
+        }
+        .Services h1{
+            font-size: 2rem;
         }
         .Name{
-            margin-top: 5%;
-            padding: 2%;
+         
         }
         .Name h1{
-            font-size: 8rem;
         }
 }
 
-@media (max-width:488px) {
-    .Name h1{
-        font-size: 4rem;
 
+
+
+@media (max-width:1039px ) and (min-width:700px) {
+    .navbar{
+        justify-content: center;
+    }
+    .Services{
+        flex-direction: column;
     }
     .Services h1{
-        /* font-size: 2rem; */
+        font-size:2rem ;
+    }
+    .Name h1 {
+        font-size: 5rem;
+        /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
     }
 }
 
-@media  (max-width:376px) {
-    .navbar{
-        display: flex;
-        width: 100%;
-        justify-content: flex-start;
-        /* justify-content: ; */
+
+@media (max-width:699px) {
+    .Services{
+        flex-direction: column;
     }
-    .about{
-        display: flex;
-        justify-content: center;
-        font-size: 3.5rem;
-        padding: 5%;
+    .Name h1{
+        font-size: 4rem;
     }
-    .about h1{
-        font-size: 2rem;
+    .Name h2{
+        font-size: 1.1rem;
+    }
+    .Services p {
+        font-size: 1rem;
     }
 }
 
-@media (max-width:336px) {
-    .navbar{
-        display: flex;
-        justify-content: space-between;
-    }
-    .about{
-        padding: 5%;
-    }
+@media (max-width:400px) {
+   .about h1{
+       /* display: flex; */
+       /* flex-wrap: wrap; */
+       font-size: 1.5rem;
+   }
+   .navbar{
+       width: 100%;
+   }
+   .Name{
+       margin-top: 20%;
+   }
+   footer{
+       width: 100vw;
+   }
 }
 
+
+@media (max-width:330px) {
+    .about p{
+        font-size: .6rem;
+    }
+}
