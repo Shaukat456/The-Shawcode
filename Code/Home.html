@@ -11,22 +11,19 @@
     <link rel="stylesheet" href="/Styles/Section.css">
     <link rel="stylesheet" href="/Styles/Contact.css">
     <style>
-        * {
-            transition: all .7s ease;
-        }
-
         html {
             scroll-behavior: smooth;
         }
 
         * {
             box-sizing: border-box;
+            transition: all .7s ease;
         }
 
         body {
-            margin: 0;
-            padding: 0;
-            background: rgb(0, 41, 31);
+            margin: 0%;
+            padding: 0%;
+            background-color: rgb(0, 41, 31);
 
         }
 
@@ -68,6 +65,19 @@
             padding: 25px;
             text-decoration: none;
             color: yellow;
+        }
+        .disp{
+            display: flex;
+        }
+        .anim{
+            animation: da 1s ease 1;
+        }@keyframes da{
+            from{
+                transform: scale(.1);
+            }
+            to{
+                transform: scale(1);
+            }
         }
     </style>
 
@@ -263,16 +273,40 @@
 
 
     const Name=document.querySelector(".img p");
-    // Name.children[0].classList.add("anim")
-let addThis=  Name.children[0].childNodes[0].nodeValue[0]
-addThis.replace("S",'d')
+ 
+let addThis=  Name.children[0].childNodes[0].nodeValue[0];
+
+
+const services=document.querySelectorAll(".Services");
+const footer=document.querySelector("footer")
+const about=document.querySelector(".about")
+
+window.addEventListener("scroll",()=>{
+    let scrp=window.innerHeight;
+
+    services.forEach((section)=>{
+      let each_section=  section.getBoundingClientRect().top;
+
+      console.log(each_section);
+
+      if(each_section < scrp){
+          section.classList.add("anim")
+          section.classList.add("disp")
+      
+      }else{
+          section.classList.remove("disp")
+      }
+      
+    })
+
+   
+})
 
 
 
-    // intro.addEventListener("click",(letter)=>{
-    //    let node= intro.childNodes[2]
-    //    console.log(node)
-    // })
+
+
+
 
 </script>
 

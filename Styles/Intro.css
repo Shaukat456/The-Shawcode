@@ -1,3 +1,13 @@
+*{
+    box-sizing: border-box;
+    transition: all .6s ease;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+
+
 .intro{
     display: flex;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -68,6 +78,9 @@ button{
     /* border: 2px solid white; */
     /* background-color: saddlebrown; */
     color: rgb(74, 146, 7);
+    /* position: absolute; */
+    /* left: 500px; */
+    /* margin-left: -66px; */
     animation-name: sas;
     animation-timing-function: ease-in;
     animation-duration: 2s;
@@ -84,26 +97,8 @@ button{
 
     }
 
-
-
-
-
-
-    
 }
-.anim{
-    animation-name: ss;
-    animation-timing-function: ease-in;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
-}@keyframes ss{
-    from{
-        transform: skew(60deg);
-    }
-    to{
-        transform: skew(0deg);
-    }
-}
+
 
 .about img{
     border-radius: 50% 60% 60% 70%;
@@ -220,7 +215,7 @@ button{
 }
 
 
-@media (max-width:330px) {
+@media (max-width:370px) {
     .about p{
         font-size: .6rem;
     }
