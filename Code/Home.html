@@ -88,6 +88,19 @@
                 transform: scale(1) skew(0deg);
             }
         }
+
+
+        /* MENU BTN */
+
+        .menu{
+            height: 2vh;
+            width: auto;
+            color: white;
+            background-color: tomato;
+        }
+        .removemenu{
+            display: none;
+        }
     </style>
 
 </head>
@@ -110,6 +123,7 @@
                 <a href="#about" activeClassName=''>
                     <li>ABOUT</li>
                 </a>
+                <button class="menu">menu</button>
                 <!-- <a href="#contact"  activeClassName=''  >       <li></li> </a>             -->
 
             </ul>
@@ -289,6 +303,8 @@ let addThis=  Name.children[0].childNodes[0].nodeValue[0];
 const services=document.querySelectorAll(".Services");
 const footer=document.querySelector("footer")
 const about=document.querySelector(".about")
+const navlist=document.querySelectorAll("li")
+const menubtn=document.querySelector(".menu")
 
 window.addEventListener("scroll",()=>{
     let scrp=window.innerHeight;
@@ -312,6 +328,18 @@ window.addEventListener("scroll",()=>{
    
 })
 
+console.log(window.innerWidth)
+
+if(window.innerWidth >970){
+    navlist.forEach((a)=>{
+        a.classList.remove("navbar")
+        a.classList.remove("ul")
+        
+        menubtn.addEventListener("click",()=>{
+            console.log('clicking')
+        })
+    })
+}
 
 
 
