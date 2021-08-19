@@ -8,6 +8,9 @@ body{
 }
 
 
+/* html{
+    font-size: 10%;
+} */
 
 .navbar{
     display: flex;
@@ -17,7 +20,6 @@ body{
     width: 100vw;
     /* z-index: ; */
 }
-
 .navbar ul{
     display: flex;
     /* flex-wrap: wrap; */

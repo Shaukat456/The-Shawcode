@@ -2,6 +2,9 @@
     box-sizing: border-box;
     transition: all .6s ease;
 }
+/* html{
+    font-size: 40%;
+} */
 body{
     margin: 0;
     padding: 0;
@@ -13,7 +16,24 @@ body{
     font-family: Georgia, 'Times New Roman', Times, serif;
     justify-content: center;
     align-items: center;
+    margin-top: 10%;
+    
+    animation: q 3s ease infinite;
+
+
     /* margin-top: 5%; */
+}
+
+@keyframes qwe {
+    40%{
+        word-spacing: 50%;
+    }
+    70%{
+        word-spacing: 30%;
+    }
+    100%{
+        word-spacing: 0%;
+    }
 }
 
 .Name{
@@ -30,6 +50,35 @@ body{
 .Name h1{
     font-size: 6rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+
+    
+    animation: qwe  3s ease 1;
+
+
+    /* margin-top: 5%; */
+}
+
+@keyframes qwe {
+    from{
+        /* margin: 501px; */
+        word-spacing: 50px;
+        transform: skew(180deg);
+    }
+    /* 70%{
+        /* transform: skew(360deg); */
+
+ 
+    to{
+        transform: skew(0deg);
+
+        word-spacing: 0px;
+    }
+
+
+
+
+
 }
 .Name h2{
     font-size: 1.4rem;
@@ -41,6 +90,7 @@ button{
 }
 .about {
     display: flex;
+    width: 100vw;
     z-index: -4;
     padding: 5%;
     align-items: center;
@@ -81,6 +131,7 @@ button{
     /* position: absolute; */
     /* left: 500px; */
     /* margin-left: -66px; */
+    z-index: -521;
     animation-name: sas;
     animation-timing-function: ease-in;
     animation-duration: 2s;
@@ -145,6 +196,9 @@ button{
 /* desktop */
 
 @media (min-width:1040px) {
+    html{
+        font-size: 70%;
+    }
         .navbar{
           
         }
@@ -153,7 +207,7 @@ button{
          /* flex-direction: column; */
         }
         .Services h1{
-            font-size: 2rem;
+            /* font-size: 2rem; */
         }
         .Name{
          
@@ -166,6 +220,9 @@ button{
 
 
 @media (max-width:1039px ) and (min-width:700px) {
+    html{
+        font-size: 60%;
+    }
     .navbar{
         justify-content: center;
     }
@@ -173,35 +230,42 @@ button{
         flex-direction: column;
     }
     .Services h1{
-        font-size:2rem ;
+        /* font-size:2rem ; */
     }
     .Name h1 {
-        font-size: 5rem;
+        /* font-size: 5rem; */
         /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
     }
 }
 
 
 @media (max-width:699px) {
+    html{
+        font-size: 62%;
+    }
     .Services{
         flex-direction: column;
     }
     .Name h1{
-        font-size: 4rem;
+        /* font-size: 4rem; */
     }
     .Name h2{
-        font-size: 1.1rem;
+        /* font-size: 1.1rem; */
     }
     .Services p {
-        font-size: 1rem;
+        /* font-size: 1rem; */
     }
 }
 
 @media (max-width:400px) {
+    html{
+        font-size: 46%;
+    }
+
    .about h1{
        /* display: flex; */
        /* flex-wrap: wrap; */
-       font-size: 1.5rem;
+       /* font-size: 1.5rem; */
    }
    .navbar{
        width: 100%;
@@ -216,7 +280,11 @@ button{
 
 
 @media (max-width:370px) {
-    .about p{
-        font-size: .6rem;
+    html{
+        font-size: 47%;
+    }
+    .about {
+        width: 100vw;
+        /* font-size: .6rem; */
     }
 }

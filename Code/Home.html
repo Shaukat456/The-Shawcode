@@ -13,6 +13,7 @@
     <style>
         html {
             scroll-behavior: smooth;
+            font-size: 1em;
         }
 
         * {
@@ -72,11 +73,19 @@
         .anim{
             animation: da 1s ease 1;
         }@keyframes da{
-            from{
-                transform: scale(.1);
+            10%{
+                opacity: .1;
+                transform: scale(.1) ;
             }
-            to{
-                transform: scale(1);
+            50%{
+                margin-top: -50%;
+                word-spacing: 560px;
+                opacity: .5;
+                transform: scale(.3) skew(50deg);
+            }
+            100%{
+                opacity: 1;
+                transform: scale(1) skew(0deg);
             }
         }
     </style>
@@ -285,13 +294,14 @@ window.addEventListener("scroll",()=>{
     let scrp=window.innerHeight;
 
     services.forEach((section)=>{
-      let each_section=  section.getBoundingClientRect().top;
+        let each_section=  section.getBoundingClientRect().top;
+        // console.log(section.nodeName[0])
 
-      console.log(each_section);
+    //   console.log(each_section);
 
       if(each_section < scrp){
-          section.classList.add("anim")
-          section.classList.add("disp")
+          section.classList.add("disp",'anim')
+        //   section.classList.add("anim")
       
       }else{
           section.classList.remove("disp")
