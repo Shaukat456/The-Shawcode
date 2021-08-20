@@ -98,17 +98,22 @@ button{
     flex-wrap: wrap;
     color:wheat;
     /* background-color: bisque; */
-    background-color: #1e4b5a;
+    background-color:rgb(0, 41, 50);
 
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .about p{
+    transform: scaleZ(5);
+    /* background-color: rgb(3, 63, 78); */
+    /* padding: 2%; */
     /* border: 2px solid white; */
     /* border-radius: 5%; */
     /* font-family:cursive; */
+    word-spacing: 2px;
     font-size: 1.4rem;
     z-index: -100;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 
 
@@ -286,5 +291,8 @@ button{
     .about {
         width: 100vw;
         /* font-size: .6rem; */
+    }
+    .about img{
+        height: 30vh;
     }
 }
