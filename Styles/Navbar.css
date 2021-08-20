@@ -15,6 +15,7 @@ body{
 .navbar{
     display: flex;
     background: rgb(3, 110, 84);
+    background: rgb(0, 41, 31);
     position: fixed;
     top: 0;
     width: 100vw;

@@ -91,15 +91,58 @@
 
 
         /* MENU BTN */
-
         .menu{
-            height: 2vh;
-            width: auto;
-            color: white;
-            background-color: tomato;
-        }
-        .removemenu{
             display: none;
+            color: gold;
+            /* background-color: rgb(42, 19, 246); */
+            height: auto;
+            width: auto;
+            cursor: pointer;
+
+        }
+        .hide{
+            transform: translateY(-50%);
+        }
+        .show{
+            transform: translateY(0px);
+
+        }
+        .menu:active, .menu:hover{
+            transform: scale(1.1);
+        }
+        .menud {
+            cursor: pointer;
+            display: flex;
+            height: auto;
+            width: auto;
+            color: black;
+
+            /* color: white; */
+            /* background-color: tomato; */
+            border:2px solid white;
+            border-radius: 50%;
+            text-align: center;
+            align-items: center;
+        }
+        .removelist{
+            transition: all .7s ease;
+            /* display: ; */
+            animation: remoD .4s ease 1;
+            transform: translateX(-500px);
+            /* display: none; */
+            
+        }@keyframes remo{
+            49%{
+              opacity: .1;
+            }
+
+            80%{
+                opacity: .3;
+            }
+            100%{
+                /* display: none; */
+                transform: translateX(500px);
+            }
         }
     </style>
 
@@ -123,7 +166,7 @@
                 <a href="#about" activeClassName=''>
                     <li>ABOUT</li>
                 </a>
-                <button class="menu">menu</button>
+                <button class="menu">   <i> > </i> </button>
                 <!-- <a href="#contact"  activeClassName=''  >       <li></li> </a>             -->
 
             </ul>
@@ -279,7 +322,7 @@
 
 
     const IntroH1 = document.querySelector('.intro h1');
-    console.log(IntroH1);
+    // console.log(IntroH1);
 
     IntroH1.addEventListener("click", (letter) => {
         IntroH1.classList.add('anim')
@@ -328,19 +371,50 @@ window.addEventListener("scroll",()=>{
    
 })
 
-console.log(window.innerWidth)
+// console.log(window.innerWidth)
 
-if(window.innerWidth >970){
-    navlist.forEach((a)=>{
-        a.classList.remove("navbar")
-        a.classList.remove("ul")
-        
-        menubtn.addEventListener("click",()=>{
-            console.log('clicking')
-        })
-    })
+// Firing Menu Button
+if(window.innerWidth < 970){
+    
 }
 
+    menubtn.classList.add("menud")
+    // a.classList.add("removelist")
+// 
+
+
+menubtn.addEventListener("click",()=>{
+    navlist.forEach((a)=>{
+        if(a.classList.contains("removelist")){
+            a.classList.remove("removelist")
+            menubtn.textContent='Hide'
+        navbar.classList.add("show")
+        navbar.classList.remove("hide")
+
+        }
+        else{
+            menubtn.textContent='SHOW'
+        a.classList.add("removelist")
+        navbar.classList.remove("show")
+        navbar.classList.add("hide")
+        }
+    })
+
+})
+
+
+window.addEventListener("scroll",()=>{
+    let iposition=window.scrollY;
+    
+    if(iposition > 50 ){
+    
+        navbar.style.background='rgb(3, 110, 84)'
+    }
+    else {
+        navbar.style.background=' rgb(0, 41, 31)'
+
+    }
+})
 
 
 
