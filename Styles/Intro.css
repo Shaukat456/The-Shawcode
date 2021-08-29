@@ -1,6 +1,7 @@
 *{
     box-sizing: border-box;
     transition: all .6s ease;
+   
 }
 /* html{
     font-size: 40%;
@@ -8,6 +9,7 @@
 body{
     margin: 0;
     padding: 0;
+    /* overflow: hidden; */
 }
 
 
@@ -17,8 +19,9 @@ body{
     justify-content: center;
     align-items: center;
     margin-top: 10%;
-    
+    z-index: -500;
     animation: q 3s ease infinite;
+    /* overflow: hidden; */
 
 
     /* margin-top: 5%; */
@@ -90,7 +93,7 @@ button{
 }
 .about {
     display: flex;
-    width: 100vw;
+    width: 100%;
     z-index: -4;
     padding: 5%;
     align-items: center;
@@ -266,11 +269,16 @@ button{
     html{
         font-size: 46%;
     }
+    
 
    .about h1{
        /* display: flex; */
        /* flex-wrap: wrap; */
-       /* font-size: 1.5rem; */
+       font-size: 1.5rem;
+   }
+   .about img{
+       /* width: 10rem;
+       height: 10rem; */
    }
    .navbar{
        width: 100%;
@@ -289,10 +297,25 @@ button{
         font-size: 47%;
     }
     .about {
-        width: 100vw;
+        /* width: 100vw; */
         /* font-size: .6rem; */
+        overflow: hidden;
+        width: 100%;
     }
     .about img{
         height: 30vh;
     }
+    .about p{
+        font-size: 1rem;
+    }
+    .navbar ul {
+        justify-content: space-around;
+    }
+    .navbar  li{
+        font-size: .8rem;
+    }
+}
+
+@media (max-width:360) {
+    
 }

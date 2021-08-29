@@ -78,10 +78,10 @@
                 transform: scale(.1) ;
             }
             50%{
-                margin-top: -50%;
+                /* margin-top: -50%;
                 word-spacing: 560px;
                 opacity: .5;
-                transform: scale(.3) skew(50deg);
+                transform: scale(.3) skew(50deg); */
             }
             100%{
                 opacity: 1;
@@ -109,7 +109,7 @@
         }
         .menu:active, .menu:hover{
             transform: scale(1.1);
-            background:rgb(242,52,12);
+            background-color: rosybrown;
         }
         .menud {
             cursor: pointer;
@@ -130,6 +130,8 @@
             /* display: ; */
             animation: remoD .4s ease 1;
             transform: translateX(-500px);
+            /* transform: scale(0) ; */
+
             /* display: none; */
             
         }@keyframes remo{
@@ -138,12 +140,22 @@
             }
 
             80%{
-                opacity: .3;
+                
+                
             }
             100%{
                 /* display: none; */
-                transform: translateX(500px);
+                transform: translateX(- 500px) ;
+                /* transform: scale(60) ; */
             }
+        }
+
+        .dropdown{
+            display: none;
+        }
+        /* HIDE MENU BUTTON */
+        .dhide{
+            display: none;
         }
     </style>
 
@@ -161,17 +173,39 @@
                 <a href="#intro" activeClassName='activee'>
                     <li>HOME</li>
                 </a>
-                <a href="#Services" activeClassName=''>
+                <a href="#Services" activeClassName='activee'>
                     <li>SERVICES</li>
                 </a>
-                <a href="#about" activeClassName=''>
+                <a href="#about" activeClassName='activee'>
                     <li>ABOUT</li>
                 </a>
-                <a href="#soc"  activeClassName=''  >       <li> Contact</li> </a>            
-                <button class="menu">   <i> >    </i> </button>
+                <a href="#soc"  activeClassName='activee'  >       <li> Contact</li> </a>            
+                <button class="menu">   <i> HIDE /SHOW   </i> </button>
 
             </ul>
             <img src="" alt="menuIcon">
+
+            <!-- DROPDOWN MENU -->
+            <!-- <button class="menu">  </button> -->
+            <div class="dropdown" id='dropdown'>
+                <ul class="links ">
+                    <a href="#intro" activeClassName='activee'>
+                        <li>HOME</li>
+                    </a>
+                    <a href="#Services" activeClassName='activee'>
+                        <li>SERVICES</li>
+                    </a>
+                    <a href="#about" activeClassName='activee'>
+                        <li>ABOUT</li>
+                    </a>
+                    <a href="#soc"  activeClassName='activee'  >       <li> Contact</li> </a>            
+    
+                </ul>
+            </div>
+
+
+
+
         </div>
 
         <div class="intro" id='intro'>
@@ -266,7 +300,7 @@
 
                 <div class="soc" id='soc'>
 
-                    <a href="" class="socials"> </a>
+                    <a href="" target="_blank" class="socials"> </a>
                 </div>
 
 
@@ -298,22 +332,26 @@
 
     const accs = [{
         // link:'',
-        name: 'Facebook'
+        name: 'Facebook',
+        links:'www.facebook.com/shaukatsohail'
 
 
     },
 
     {
-        name: 'Instagram'
+        name: 'Instagram',
+        links:'www.facebook.com'
     },
 
     {
-        name: 'LinkedIn'
+        name: 'LinkedIn',
+        links:'www.facebook.com'
     },
 
 
     {
-        name: 'Github'
+        name: 'Github',
+        links:'www.facebook.com'
     }
     ]
 
@@ -332,12 +370,14 @@
 
     const printNames=  accs.map((accounts ) => {
         let output = accounts.name;
+        let link=accounts.links;
         // output")
         return output
-
+        
     })
-
-    socails.textContent=printNames;
+           socails.textContent=printNames;
+        
+ 
 
 
     const Name=document.querySelector(".img p");
@@ -354,15 +394,19 @@ const menubtn=document.querySelector(".menu")
 window.addEventListener("scroll",()=>{
     let scrp=window.innerHeight;
 
-    services.forEach((section)=>{
-        let each_section=  section.getBoundingClientRect().top;
-        // console.log(section.nodeName[0])
 
+    services.forEach((section)=>{
+        let each_section=  section.getBoundingClientRect().height;
+        // console.log(section.nodeName[0])
+        // services.classList.remove(".Services")
     //   console.log(each_section);
 
       if(each_section < scrp){
-          section.classList.add("disp",'anim')
-        //   section.classList.add("anim")
+        // services.classList.add(".Services")
+        //   section.classList.add('anim')
+          section.classList.add('disp')
+          
+          section.classList.add("anim")
       
       }else{
           section.classList.remove("disp")
@@ -408,8 +452,8 @@ menubtn.addEventListener("click",()=>{
 window.addEventListener("scroll",()=>{
     let iposition=window.scrollY;
     
+
     if(iposition > 50 ){
-    
         navbar.style.background='rgb(3, 110, 84)'
     }
     else {
