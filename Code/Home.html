@@ -475,11 +475,15 @@ window.addEventListener("scroll",()=>{
     intro.style.textAlign += window.pageYOffset + "px"
     intro.style.opacity= 1 -  window.pageYOffset/200 + " "
     intro.style.backgroundColor=  ` rgb( ${ window.pageYOffset})` + " "
-   IntroH1.style.wordSpacing= 5 -  window.pageYOffset/1 + "px"
+   IntroH1.style.wordSpacing= 1-  window.pageYOffset/1 + "px"
   
     // footer.style.marginTop
-
-   
+    
+    // intro.style.opacity= 1 -  window.pageYOffset/200 + " "
+    services.forEach((Services)=>{
+     return   Services.style.opacity= window.pageYOffset/100 -1 + " "
+    })
+  
 
     // services.style.wordSp= 1 -  window.pageYOffset/200 + " "
 })
