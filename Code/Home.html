@@ -400,6 +400,7 @@ const footer=document.querySelector("footer")
 const about=document.querySelector(".about")
 const navlist=document.querySelectorAll("li")
 const menubtn=document.querySelector(".menu")
+const intro=document.querySelector(".intro")
 
 window.addEventListener("scroll",()=>{
     let scrp=window.innerHeight;
@@ -461,7 +462,6 @@ menubtn.addEventListener("click",()=>{
 
 window.addEventListener("scroll",()=>{
     let iposition=window.scrollY;
-    
 
     if(iposition > 50 ){
         navbar.style.background='rgb(3, 110, 84)'
@@ -470,6 +470,18 @@ window.addEventListener("scroll",()=>{
         navbar.style.background=' rgb(0, 41, 31)'
 
     }
+// console.log(about)
+    intro.style.top= window.pageYOffset + "px"
+    intro.style.textAlign += window.pageYOffset + "px"
+    intro.style.opacity= 1 -  window.pageYOffset/200 + " "
+    intro.style.backgroundColor=  ` rgb( ${ window.pageYOffset})` + " "
+   IntroH1.style.wordSpacing= 5 -  window.pageYOffset/1 + "px"
+  
+    // footer.style.marginTop
+
+   
+
+    // services.style.wordSp= 1 -  window.pageYOffset/200 + " "
 })
 
 
