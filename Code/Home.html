@@ -291,8 +291,9 @@
         </div>  -->
 
         <div class="about" id='about'>
+           
             <div class="img">
-                <h1>SHAUKAT SOHAIL</h1>
+                <h1>AUTHOR</h1>
                 <img src="../Images/_MG_0041.JPG" alt="">
                 <p> Hey ! its me  <strong> <i> SHAUKAT SOHAIL </i>  </strong>  , A    <strong> Full Stack  Web Developer</strong>
                    & the founder of <strong>THE SHAW CODE</strong> a web development and designing startup with over 500+ satisfied clients internationally. 
@@ -401,6 +402,9 @@ const about=document.querySelector(".about")
 const navlist=document.querySelectorAll("li")
 const menubtn=document.querySelector(".menu")
 const intro=document.querySelector(".intro")
+const MyName=document.querySelector(".about h1")
+const Myintro=document.querySelector(".about p")
+const body=document.querySelector("body")
 
 window.addEventListener("scroll",()=>{
     let scrp=window.innerHeight;
@@ -473,19 +477,34 @@ window.addEventListener("scroll",()=>{
     intro.style.textAlign += window.pageYOffset + "px"
     intro.style.opacity= 1 -  window.pageYOffset/200 + " "
     intro.style.backgroundColor=  ` rgb( ${ window.pageYOffset})` + " "
-   IntroH1.style.wordSpacing= 1-  window.pageYOffset/1 + "px"
+   IntroH1.style.wordSpacing= 1 -  window.pageYOffset/20     + "px"
   
     // footer.style.marginTop
+    // Services.style.opacity= 1- window.pageYOffset/100  + " "
     
     // intro.style.opacity= 1 -  window.pageYOffset/200 + " "
-    services.forEach((Services)=>{
-     return   Services.style.opacity= window.pageYOffset/100 -1 + " "
+    services.forEach((Ser)=>{
+       Ser.style.opacity= window.pageYOffset/100  -1 
+    Ser.style.marginTop=1 - window.pageYOffset/1    + "px"
+
+      
+    //    Ser.style.marginTop=5- window.pageYOffset/1    + "px"
+
     })
-  
+    //    services.style.opacity=1- window.pageYOffset/100   
+    footer.style.zIndex
+
+
+    about.style.marginTop=5 - window.pageYOffset/1    + "px"
+    about.style.zIndex=60
+    Myintro.style.opacity= window.pageYOffset/1 -1
+    body.style.backgroundColor=`rgb(0, 41, ${window.pageYOffset/10 -1 })`
+
+
+   
 
     // services.style.wordSp= 1 -  window.pageYOffset/200 + " "
-})
-
+}) 
 
 
 

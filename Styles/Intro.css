@@ -19,7 +19,7 @@ body{
     justify-content: center;
     align-items: center;
     margin-top: 10%;
-    z-index: -500;
+    /* z-index: -500; */
     animation: q 3s ease infinite;
     /* overflow: hidden; */
 
@@ -94,14 +94,14 @@ button{
 .about {
     display: flex;
     width: 100%;
-    z-index: -4;
+    /* z-index: 1; */
     padding: 5%;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     color:wheat;
     /* background-color: bisque; */
-    background-color:rgb(0, 41, 50);
+    /* background-color:rgb(0, 41, 50); */
     
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -116,7 +116,7 @@ button{
     /* font-family:cursive; */
     word-spacing: 2px;
     font-size: 1.4rem;
-    z-index: -100;
+    z-index: 1;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 
@@ -127,20 +127,25 @@ button{
 }
 
 
-
+.about::before{
+    content: '';
+    position: absolute;
+    /* top: 60; */
+    background: url('../Images/_MG_0038.JPG') no-repeat center/cover;
+    height: 50%;
+    width: auto;
+    z-index: 12;
+}
 
 .about h1{
     font-size: 4rem;
 }
 .about h1::first-letter{
     font-size: 8rem;
-    /* border: 2px solid white; */
-    /* background-color: saddlebrown; */
+    
     color: rgb(74, 146, 7);
-    /* position: absolute; */
-    /* left: 500px; */
-    /* margin-left: -66px; */
-    z-index: -521;
+    
+    /* z-index: 1; */
     animation-name: sas;
     animation-timing-function: ease-in;
     animation-duration: 2s;
