@@ -6,11 +6,7 @@
 /* html{
     font-size: 40%;
 } */
-body{
-    margin: 0;
-    padding: 0;
-    /* overflow: hidden; */
-}
+
 
 
 .intro{
@@ -127,14 +123,29 @@ button{
 }
 
 
+body::before{
+    content: '';
+    position: absolute;
+    display: flex;
+    /* top: 60; */
+    background: url('../Images/sunset1.jpg') no-repeat center/cover ;
+    /* transform: skew(180deg); */
+    height: 100%;
+    width: 50vw;
+    z-index: -18;
+    opacity: .6;
+}
 .about::before{
     content: '';
     position: absolute;
+    display: flex;
     /* top: 60; */
-    background: url('../Images/_MG_0038.JPG') no-repeat center/cover;
-    height: 50%;
-    width: auto;
-    z-index: 12;
+    background: url('../Images/_MG_0043.JPG') no-repeat center/cover ;
+    /* transform: skew(180deg); */
+    height: 100%;
+    width: 50vw;
+    z-index: -4;
+    opacity: .4;
 }
 
 .about h1{
