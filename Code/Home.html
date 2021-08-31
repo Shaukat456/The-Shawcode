@@ -484,7 +484,7 @@ window.addEventListener("scroll",()=>{
     
     // intro.style.opacity= 1 -  window.pageYOffset/200 + " "
     services.forEach((Ser)=>{
-       Ser.style.opacity= window.pageYOffset/100  -1 
+       Ser.style.opacity= window.pageYOffset/100  - 1 
     Ser.style.marginTop=1 - window.pageYOffset/1    + "px"
 
       
@@ -492,13 +492,14 @@ window.addEventListener("scroll",()=>{
 
     })
     //    services.style.opacity=1- window.pageYOffset/100   
-    footer.style.zIndex
+    // footer.style.zIndex
 
 
-    about.style.marginTop=5 - window.pageYOffset/1    + "px"
+    about.style.marginTop=5 - window.pageYOffset/16    + "px"
+    // about.style.transform=`scale("     ${ 5 - window.pageYOffset/1  + ""})`
     about.style.zIndex=60
     Myintro.style.opacity= window.pageYOffset/1 -1
-    body.style.backgroundColor=`rgb(0, 41, ${window.pageYOffset/10 -1 })`
+    body.style.backgroundColor=`rgb(0, 41, ${window.pageYOffset/10  -1 })`
 
 
    
