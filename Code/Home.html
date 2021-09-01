@@ -211,7 +211,7 @@
         <div class="intro" id='intro'>
             <div class="Name">
                 <h1>The Shaw Code</h1>
-                <h2>By SHAUKAT SOHAIL</h2>
+                <!-- <h2>By SHAUKAT SOHAIL</h2> -->
             </div>
             <!-- <button> Start Exploring </button> -->
         </div>
@@ -478,7 +478,10 @@ window.addEventListener("scroll",()=>{
     intro.style.opacity= 1 -  window.pageYOffset/200 + " "
     intro.style.backgroundColor=  ` rgb( ${ window.pageYOffset})` + " "
    IntroH1.style.wordSpacing= 1 -  window.pageYOffset/20     + "px"
-   IntroH1.style.transform= `translateY(  ${ 1-  window.pageYOffset/1    + " px"} )  `  
+//    IntroH1.style.transform= `translateY(  ${ 1-  window.pageYOffset/1    + " px"} )  ` 
+   IntroH1.style.transform= `scale(  ${ 1-  window.pageYOffset/1    + " "} )  ` 
+   IntroH1.style.overflow='hidden' 
+//    IntroH1.style.transform= `translateY(  ${ 1-  window.pageYOffset/1    + " px"} )  `  
    
    
   
