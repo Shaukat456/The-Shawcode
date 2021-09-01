@@ -117,13 +117,78 @@ button{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 
+}
+::-webkit-scrollbar{
+    color: rgb(0, 0, 0);
+    height: 100vh;
+    z-index: 6;
+    background: rgb(14, 35, 75);
 
 
+    /* width: 50px; */
+}
+::-webkit-scrollbar-track{
+    /* background: purple; */
+}
+::-webkit-scrollbar-button{
+    background-color: rgb(251, 251, 251);
+    border-radius: 60%;
+}
+::-webkit-scrollbar-corner{
+    background-color: rgb(202, 29, 6);
 
+}
+::-webkit-scrollbar-thumb{
+    /* background-color: rgb(47, 43, 42); */
+    background-color: rgb(255, 200, 21);
+    border-radius: 60%;
+    animation: sho 5s ease infinite;
 
 }
 
+.blog::before{
+    content: '';
+    position: absolute;
+    /* background: url('../Images/_MG_0045.JPG') no-repeat center/cover; */
+    opacity: .4;
+    height: 25vh;
+    width: 50vw;
+    
 
+    z-index: -1;
+}
+.blog:hover{
+
+    background-color:  wheat;
+    /* background-color: rgb(44, 43, 43); */
+    color: rgb(44, 43, 43);
+    font-size: 1.3rem;
+    opacity: 1;
+
+}
+.blog{
+    display: flex;
+    color: wheat;
+    flex-direction: column;
+    border: 2px solid white;
+    align-items: center;
+    background-color: rgb(44, 43, 43);
+    /* height: 100px; */
+    transition: all .2s ease;
+text-align: center;
+    font-size: .6rem;
+    opacity: .5;
+}
+.blog h1:hover{
+    color: rgb(44, 43, 43);
+
+}
+.blog h1{
+    /* font-size: 3.1rem; */
+    text-decoration: underline;
+    /* color: rgb(14, 14, 47); */
+    /* color: rgba(245, 222, 179, 0.931); */
+}
 body::before{
     content: '';
     position: absolute;
@@ -240,6 +305,33 @@ body::before{
         }
         .Name h1{
         }
+        ::-webkit-scrollbar{
+            color: rgb(0, 0, 0);
+            height: 100vh;
+            z-index: 6;
+            background: rgb(14, 35, 75);
+        
+        
+            /* width: 50px; */
+        }
+        ::-webkit-scrollbar-track{
+            /* background: purple; */
+        }
+        ::-webkit-scrollbar-button{
+            background-color: rgb(251, 251, 251);
+            border-radius: 60%;
+        }
+        ::-webkit-scrollbar-corner{
+            background-color: rgb(202, 29, 6);
+        
+        }
+        ::-webkit-scrollbar-thumb{
+            /* background-color: rgb(47, 43, 42); */
+            background-color: rgb(255, 200, 21);
+            border-radius: 60%;
+            animation: sho 5s ease infinite;
+        
+        }
 }
 
 
@@ -262,6 +354,38 @@ body::before{
         /* font-size: 5rem; */
         /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
     }
+
+
+    ::-webkit-scrollbar{
+        color: rgb(0, 0, 0);
+        height: 100vh;
+        z-index: 6;
+        background: rgb(14, 35, 75);
+    
+    
+        /* width: 50px; */
+    }
+    ::-webkit-scrollbar-track{
+        /* background: purple; */
+    }
+    ::-webkit-scrollbar-button{
+        background-color: rgb(251, 251, 251);
+        border-radius: 60%;
+    }
+    ::-webkit-scrollbar-corner{
+        background-color: rgb(202, 29, 6);
+    
+    }
+    ::-webkit-scrollbar-thumb{
+        /* background-color: rgb(47, 43, 42); */
+        background-color: rgb(255, 200, 21);
+        border-radius: 60%;
+        animation: sho 5s ease infinite;
+    
+    }
+
+
+
 }
 
 
@@ -281,6 +405,37 @@ body::before{
     .Services p {
         /* font-size: 1rem; */
     }
+
+
+    ::-webkit-scrollbar{
+        color: rgb(0, 0, 0);
+        height: 100vh;
+        z-index: 6;
+        background: rgb(14, 35, 75);
+    
+    
+        /* width: 50px; */
+    }
+    ::-webkit-scrollbar-track{
+        /* background: purple; */
+    }
+    ::-webkit-scrollbar-button{
+        background-color: rgb(251, 251, 251);
+        border-radius: 60%;
+    }
+    ::-webkit-scrollbar-corner{
+        background-color: rgb(202, 29, 6);
+    
+    }
+    ::-webkit-scrollbar-thumb{
+        /* background-color: rgb(47, 43, 42); */
+        background-color: rgb(255, 200, 21);
+        border-radius: 60%;
+        animation: sho 5s ease infinite;
+    
+    }
+
+
 }
 
 @media (max-width:400px) {
@@ -307,6 +462,33 @@ body::before{
    footer{
        width: 100vw;
    }
+   ::-webkit-scrollbar{
+    color: rgb(0, 0, 0);
+    height: 100vh;
+    z-index: 6;
+    background: rgb(14, 35, 75);
+
+
+    /* width: 50px; */
+}
+::-webkit-scrollbar-track{
+    /* background: purple; */
+}
+::-webkit-scrollbar-button{
+    background-color: rgb(251, 251, 251);
+    border-radius: 60%;
+}
+::-webkit-scrollbar-corner{
+    background-color: rgb(202, 29, 6);
+
+}
+::-webkit-scrollbar-thumb{
+    /* background-color: rgb(47, 43, 42); */
+    background-color: rgb(255, 200, 21);
+    border-radius: 60%;
+    animation: sho 5s ease infinite;
+
+}
 }
 
 
@@ -332,8 +514,35 @@ body::before{
     .navbar  li{
         font-size: .8rem;
     }
+    ::-webkit-scrollbar{
+        color: rgb(0, 0, 0);
+        height: 100vh;
+        z-index: 6;
+        background: rgb(14, 35, 75);
+    
+    
+        /* width: 50px; */
+    }
+    ::-webkit-scrollbar-track{
+        /* background: purple; */
+    }
+    ::-webkit-scrollbar-button{
+        background-color: rgb(251, 251, 251);
+        border-radius: 60%;
+    }
+    ::-webkit-scrollbar-corner{
+        background-color: rgb(202, 29, 6);
+    
+    }
+    ::-webkit-scrollbar-thumb{
+        /* background-color: rgb(47, 43, 42); */
+        background-color: rgb(255, 200, 21);
+        border-radius: 60%;
+        animation: sho 5s ease infinite;
+    
+    }
 }
 
-@media (max-width:360) {
+@media (max-width:360px) {
     
 }
