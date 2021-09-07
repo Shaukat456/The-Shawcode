@@ -233,7 +233,7 @@
 
         <div class="intro" id='intro'>
             <div class="Name">
-                <h1>The Shaw Code</h1>
+                <h1 >The Shaw Code</h1>
                 <!-- <h2>By SHAUKAT SOHAIL</h2> -->
             </div>
             <!-- <button> Start Exploring </button> -->
@@ -338,12 +338,12 @@
      
 
         <div class="buttonToUp">
-            <a href="#intro">
+            <!-- <a href="#"> -->
             <button  id='goUp'> GO UP  </button>
                 <!-- <i>HAHAHHA</i> -->
 
 
-            </a>
+            <!-- </a> -->
         </div>
 
 
@@ -493,13 +493,18 @@ menubtn.addEventListener("click",()=>{
 window.addEventListener("scroll",()=>{
     let iposition=window.scrollY;
 
+
+
     if(iposition > 50 ){
         navbar.style.background='rgb(3, 110, 84)'
         btnUp.style.display='flex'
+        btnUp.classList.add("anim")
     }
     else {
         navbar.style.background=' rgb(0, 41, 31)'
         btnUp.style.display='none'
+        btnUp.classList.remove("anim")
+
     }
     intro.style.top= window.pageYOffset + "px"
     intro.style.textAlign += window.pageYOffset + "px"
