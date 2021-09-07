@@ -29,6 +29,8 @@
         }
 
         footer {
+            /* position: absolute; */
+            /* t; */
             text-align: center;
             background-color: rgb(6, 120, 148);
             color: rgb(255, 255, 255);
@@ -89,7 +91,27 @@
                 transform: scale(1) skew(0deg);
             }
         }
+        .buttonToUp{
+            display: flex;
+            justify-content: flex-end;
+            position: fixed;
+            top: 60vh;
+        }
+        #goUp{
+            display:none;
+            position: sticky;
+            transition: all .4s ease;
+            border-radius: 60%;
+            padding: 20%;
+            cursor: pointer;
+            border: 2px solid white;
+            width:auto;
+        }
+::selection{
+    background-color: black;
+    color: yellow;
 
+}
 
         /* MENU BTN */
         .menu{
@@ -292,10 +314,10 @@
         </div>  -->
 
         <div class="about" id='about'>
-           
+        
             <div class="img">
                 <h1>AUTHOR</h1>
-                <img src="../Images/_MG_0041.JPG" alt="">
+                <img  src="../Images/_MG_0041.JPG" loading="lazy" alt="">
                 <p> Hey ! its me  <strong> <i> SHAUKAT SOHAIL </i>  </strong>  , A    <strong> Full Stack  Web Developer</strong>
                    & the founder of <strong>THE SHAW CODE</strong> a web development and designing startup with over 500+ satisfied clients internationally. 
                    My startup is currently prospering in web domain but that doesn't mean we don't make applications for mobile or whatsoever you use them on😆 !
@@ -313,17 +335,11 @@
 
         </div>
 
-        <div class="blog">
-            <h1>THIS WEBSITE IS HARDCODED  , NO LIBRARIES USED</h1>
-            <div class="this">
-                <!-- <img src="../Images/_MG_0038.JPG" class="section" alt="BLOGS"> -->
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius magnam et, facere dicta quidem alias dolorum quis distinctio ipsam deserunt beatae iure culpa obcaecati quod autem cupiditate, vero aspernatur. Debitis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex placeat quia corporis tenetur quo accusantium fugiat praesentium. Animi, dolorem consequuntur maiores, pariatur suscipit adipisci quia quibusdam sequi neque sunt assumenda molestiae eos doloribus praesentium temporibus dolor officia nemo eius, iusto non nam. Porro perferendis praesentium eaque sint tempora distinctio iste quidem dolores ratione delectus? Libero, hic animi quae saepe sed voluptate itaque ea praesentium rem autem dignissimos, nihil modi esse rerum repellendus deleniti totam voluptatum suscipit provident reprehenderit nisi, tempore sit laborum quos. Consectetur architecto sunt corrupti corporis, eaque dicta, animi quis ipsa vitae excepturi omnis delectus alias mollitia maiores. </p>
-            </div>
-        </div>
-
+     
 
         <div class="buttonToUp">
             <a href="#intro">
+            <button  id='goUp'> GO UP  </button>
                 <!-- <i>HAHAHHA</i> -->
 
 
@@ -340,6 +356,8 @@
     const navbar = document.getElementById('navbar');
     const preloader = document.querySelector(".preloader");
     const socails = document.querySelector(".socials")
+    const btnUp=document.querySelector("#goUp")
+
 
 
     const accs = [{
@@ -410,6 +428,13 @@ const body=document.querySelector("body")
 window.addEventListener("scroll",()=>{
     let scrp=window.innerHeight;
 
+    // if(scrp > 400){
+    //     btnUp.style.display='flex'
+    // }
+    // else{
+
+    // }
+
 
     services.forEach((section)=>{
         let each_section=  section.getBoundingClientRect().top;
@@ -470,9 +495,11 @@ window.addEventListener("scroll",()=>{
 
     if(iposition > 50 ){
         navbar.style.background='rgb(3, 110, 84)'
+        btnUp.style.display='flex'
     }
     else {
         navbar.style.background=' rgb(0, 41, 31)'
+        btnUp.style.display='none'
     }
     intro.style.top= window.pageYOffset + "px"
     intro.style.textAlign += window.pageYOffset + "px"
@@ -517,6 +544,7 @@ window.addEventListener("scroll",()=>{
 
     // services.style.wordSp= 1 -  window.pageYOffset/200 + " "
 }) 
+
 
 
 

@@ -138,6 +138,8 @@ button{
     background-color: rgb(202, 29, 6);
 
 }
+
+
 ::-webkit-scrollbar-thumb{
     /* background-color: rgb(47, 43, 42); */
     background-color: rgb(255, 200, 21);
@@ -305,33 +307,8 @@ body::before{
         }
         .Name h1{
         }
-        ::-webkit-scrollbar{
-            color: rgb(0, 0, 0);
-            height: 100vh;
-            z-index: 6;
-            background: rgb(14, 35, 75);
         
-        
-            /* width: 50px; */
-        }
-        ::-webkit-scrollbar-track{
-            /* background: purple; */
-        }
-        ::-webkit-scrollbar-button{
-            background-color: rgb(251, 251, 251);
-            border-radius: 60%;
-        }
-        ::-webkit-scrollbar-corner{
-            background-color: rgb(202, 29, 6);
-        
-        }
-        ::-webkit-scrollbar-thumb{
-            /* background-color: rgb(47, 43, 42); */
-            background-color: rgb(255, 200, 21);
-            border-radius: 60%;
-            animation: sho 5s ease infinite;
-        
-        }
+      
 }
 
 
@@ -356,33 +333,8 @@ body::before{
     }
 
 
-    ::-webkit-scrollbar{
-        color: rgb(0, 0, 0);
-        height: 100vh;
-        z-index: 6;
-        background: rgb(14, 35, 75);
-    
-    
-        /* width: 50px; */
-    }
-    ::-webkit-scrollbar-track{
-        /* background: purple; */
-    }
-    ::-webkit-scrollbar-button{
-        background-color: rgb(251, 251, 251);
-        border-radius: 60%;
-    }
-    ::-webkit-scrollbar-corner{
-        background-color: rgb(202, 29, 6);
-    
-    }
-    ::-webkit-scrollbar-thumb{
-        /* background-color: rgb(47, 43, 42); */
-        background-color: rgb(255, 200, 21);
-        border-radius: 60%;
-        animation: sho 5s ease infinite;
-    
-    }
+
+ 
 
 
 
@@ -407,34 +359,7 @@ body::before{
     }
 
 
-    ::-webkit-scrollbar{
-        color: rgb(0, 0, 0);
-        height: 100vh;
-        z-index: 6;
-        background: rgb(14, 35, 75);
     
-    
-        /* width: 50px; */
-    }
-    ::-webkit-scrollbar-track{
-        /* background: purple; */
-    }
-    ::-webkit-scrollbar-button{
-        background-color: rgb(251, 251, 251);
-        border-radius: 60%;
-    }
-    ::-webkit-scrollbar-corner{
-        background-color: rgb(202, 29, 6);
-    
-    }
-    ::-webkit-scrollbar-thumb{
-        /* background-color: rgb(47, 43, 42); */
-        background-color: rgb(255, 200, 21);
-        border-radius: 60%;
-        animation: sho 5s ease infinite;
-    
-    }
-
 
 }
 
@@ -462,33 +387,8 @@ body::before{
    footer{
        width: 100vw;
    }
-   ::-webkit-scrollbar{
-    color: rgb(0, 0, 0);
-    height: 100vh;
-    z-index: 6;
-    background: rgb(14, 35, 75);
+   
 
-
-    /* width: 50px; */
-}
-::-webkit-scrollbar-track{
-    /* background: purple; */
-}
-::-webkit-scrollbar-button{
-    background-color: rgb(251, 251, 251);
-    border-radius: 60%;
-}
-::-webkit-scrollbar-corner{
-    background-color: rgb(202, 29, 6);
-
-}
-::-webkit-scrollbar-thumb{
-    /* background-color: rgb(47, 43, 42); */
-    background-color: rgb(255, 200, 21);
-    border-radius: 60%;
-    animation: sho 5s ease infinite;
-
-}
 }
 
 
@@ -523,24 +423,7 @@ body::before{
     
         /* width: 50px; */
     }
-    ::-webkit-scrollbar-track{
-        /* background: purple; */
-    }
-    ::-webkit-scrollbar-button{
-        background-color: rgb(251, 251, 251);
-        border-radius: 60%;
-    }
-    ::-webkit-scrollbar-corner{
-        background-color: rgb(202, 29, 6);
     
-    }
-    ::-webkit-scrollbar-thumb{
-        /* background-color: rgb(47, 43, 42); */
-        background-color: rgb(255, 200, 21);
-        border-radius: 60%;
-        animation: sho 5s ease infinite;
-    
-    }
 }
 
 @media (max-width:360px) {
