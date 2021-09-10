@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
     <title>Document</title>
     <link rel="stylesheet" href="/Styles/Navbar.css">
     <link rel="stylesheet" href="/Styles/Intro.css">
@@ -174,11 +175,38 @@
         }
 
         .dropdown{
-            display: none;
+            display: flex;
+            /* background-color: ; */
+            position: fixed;
+            flex-direction: column;
+            align-items: center;
+            width: 0;
+            background-color: rgb(0, 0, 0);
+            transform: translateX(-30px);
+            border-radius: 4%;
+        }
+        .dropdown:hover{
+            /* transition: all .1s ease; */
+            width: 8rem;
+            transform: translateX(0px);
+            margin: 50px;
+        }
+        .dropdown li{
+            list-style: none;
+            color: wheat;
+            line-height: 50px;
+        }
+        .dropdown li:hover{
+            transition: all .2s ease;
+            color: rgb(8, 192, 8);
+        }
+        .dropdown a{
+            text-decoration: none;   
+            color: wheat;
         }
         /* HIDE MENU BUTTON */
-        .dhide{
-            display: none;
+        .dshow{
+            display: flex;
         }
     </style>
 
@@ -206,7 +234,10 @@
                 <button class="menu">   <i> HIDE /SHOW   </i> </button>
 
             </ul>
-            <img src="" alt="menuIcon">
+            </div>
+
+            
+            <!-- <img src="" alt="menuIcon"> -->
 
             <!-- DROPDOWN MENU -->
             <!-- <button class="menu">  </button> -->
@@ -428,6 +459,19 @@ const body=document.querySelector("body")
 window.addEventListener("scroll",()=>{
     let scrp=window.innerHeight;
 
+
+    intro.style.top= window.pageYOffset + "px"
+    intro.style.textAlign += window.pageYOffset + "px"
+    intro.style.opacity= 1 -  window.pageYOffset/200 + " "
+    intro.style.backgroundColor=  ` rgb( ${ window.pageYOffset})` + " "
+   IntroH1.style.wordSpacing= 1 -  window.pageYOffset/20     + "px"
+   IntroH1.style.transform= `translateX(  ${ 1-  window.pageYOffset/1    + "px"} )  ` 
+
+
+
+
+
+
     // if(scrp > 400){
     //     btnUp.style.display='flex'
     // }
@@ -493,8 +537,6 @@ menubtn.addEventListener("click",()=>{
 window.addEventListener("scroll",()=>{
     let iposition=window.scrollY;
 
-
-
     if(iposition > 50 ){
         navbar.style.background='rgb(3, 110, 84)'
         btnUp.style.display='flex'
@@ -552,7 +594,13 @@ window.addEventListener("scroll",()=>{
 
 
 
+if(window.innerWidth < 700 ){
+    navbar.classList.add("dropdown")
+}
+else{
+    navbar.classList.remove("dropdown")
 
+}
 
 </script>
 
