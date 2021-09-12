@@ -143,6 +143,7 @@ button{
 ::-webkit-scrollbar-thumb{
     /* background-color: rgb(47, 43, 42); */
     background-color: rgb(255, 200, 21);
+    width: 1vw;
     border-radius: 60%;
     animation: sho 5s ease infinite;
 

@@ -46,6 +46,8 @@
         .preloader {
             display: flex;
             justify-content: center;
+            padding: 10rem;
+
             align-items: center;
             color: white;
             background-color: rgb(0, 0, 0);
@@ -99,7 +101,7 @@
             top: 60vh;
         }
         #goUp{
-            display:none;
+            display:flex;
             position: sticky;
             transition: all .4s ease;
             border-radius: 60%;
@@ -107,6 +109,7 @@
             cursor: pointer;
             border: 2px solid white;
             width:auto;
+            z-index: 500;
         }
 ::selection{
     background-color: black;
@@ -182,14 +185,21 @@
             align-items: center;
             width: 0;
             background-color: rgb(0, 0, 0);
-            transform: translateX(-30px);
+            transform: translateX(1px);
             border-radius: 4%;
+            z-index: 20;
         }
-        .dropdown:hover{
-            /* transition: all .1s ease; */
-            width: 8rem;
-            transform: translateX(0px);
-            margin: 50px;
+        .d{
+            width: 100vw;
+            height: 100vh;
+            /* transform: translateX(0px); */
+            /* z-index: 500; */
+            
+        }
+        .hover{
+            width: 100vw;
+            height: 100vh;
+            opacity: .7;
         }
         .dropdown li{
             list-style: none;
@@ -218,6 +228,8 @@
     </div>
     <div>
 
+        <div class="Cont">
+
 
         <div class="navbar" id='navbar'>
             <ul>
@@ -243,6 +255,11 @@
             <!-- <button class="menu">  </button> -->
             <div class="dropdown" id='dropdown'>
                 <ul class="links ">
+                    <button  id='goUp'> SHOW  </button>
+
+
+
+
                     <a href="#intro" activeClassName='activee'>
                         <li>HOME</li>
                     </a>
@@ -253,7 +270,9 @@
                         <li>ABOUT</li>
                     </a>
                     <a href="#soc"  activeClassName='activee'  >       <li> Contact</li> </a>            
-    
+                    
+
+                  
                 </ul>
             </div>
 
@@ -370,24 +389,25 @@
 
         <div class="buttonToUp">
             <!-- <a href="#"> -->
-            <button  id='goUp'> GO UP  </button>
+            <!-- <button  id='goUp'> SHOW  </button> -->
                 <!-- <i>HAHAHHA</i> -->
 
 
             <!-- </a> -->
         </div>
-
-
+        
+        
         <footer>
             DESIGNED & DEVELOPED by SHAUKAT SOHAIL
         </footer>
+    </div>
 
 </body>
 <script>
     const navbar = document.getElementById('navbar');
     const preloader = document.querySelector(".preloader");
     const socails = document.querySelector(".socials")
-    const btnUp=document.querySelector("#goUp")
+    // const btnUp=document.querySelector("#goUp")
 
 
 
@@ -455,9 +475,19 @@ const intro=document.querySelector(".intro")
 const MyName=document.querySelector(".about h1")
 const Myintro=document.querySelector(".about p")
 const body=document.querySelector("body")
+const Cont=document.querySelector(".Cont")
+const dropdown=document.querySelector(".dropdown")
+const goUp=document.querySelector("#goUp")
+
+
 
 window.addEventListener("scroll",()=>{
     let scrp=window.innerHeight;
+    
+    goUp.addEventListener("click",()=>{
+        dropdown.classList.contains("hover") ?  dropdown.classList.remove("hover") : dropdown.classList.add("hover")
+
+        })
 
 
     intro.style.top= window.pageYOffset + "px"
@@ -539,13 +569,13 @@ window.addEventListener("scroll",()=>{
 
     if(iposition > 50 ){
         navbar.style.background='rgb(3, 110, 84)'
-        btnUp.style.display='flex'
-        btnUp.classList.add("anim")
+        // btnUp.style.display='flex'
+        // btnUp.classList.add("anim")
     }
     else {
         navbar.style.background=' rgb(0, 41, 31)'
-        btnUp.style.display='none'
-        btnUp.classList.remove("anim")
+        // btnUp.style.display='none'
+        // btnUp.classList.remove("anim")
 
     }
     intro.style.top= window.pageYOffset + "px"
