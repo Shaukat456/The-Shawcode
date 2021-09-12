@@ -152,6 +152,7 @@
             text-align: center;
             align-items: center;
         }
+        
         .removelist{
             transition: all .7s ease;
             /* display: ; */
@@ -189,6 +190,8 @@
             border-radius: 4%;
             z-index: 20;
         }
+
+        /* BAAD ME DEKHOUNGA ISKO */
         .d{
             width: 100vw;
             height: 100vh;
@@ -196,6 +199,10 @@
             /* z-index: 500; */
             
         }
+        .transide{
+            width: 3vw;
+        }
+
         .hover{
             width: 100vw;
             height: 100vh;
@@ -247,6 +254,7 @@
 
             </ul>
             </div>
+           
 
             
             <!-- <img src="" alt="menuIcon"> -->
@@ -256,9 +264,6 @@
             <div class="dropdown" id='dropdown'>
                 <ul class="links ">
                     <button  id='goUp'> SHOW  </button>
-
-
-
 
                     <a href="#intro" activeClassName='activee'>
                         <li>HOME</li>
@@ -485,9 +490,32 @@ window.addEventListener("scroll",()=>{
     let scrp=window.innerHeight;
     
     goUp.addEventListener("click",()=>{
+       
+        
+        if(dropdown.classList.contains("hover")){
+            goUp.innerHTML='Show'   
+            
+        }
+        else{
+            goUp.innerHTML='Hide'
+        }
+
+
         dropdown.classList.contains("hover") ?  dropdown.classList.remove("hover") : dropdown.classList.add("hover")
+        // else{
+        //     goUp.innerHTML="Show"
+            
+        // }
+        })
+
+        let list=dropdown.childNodes
+      list.forEach((navlINKS)=>{
+        navlINKS.addEventListener("click",(e)=>{
+            dropdown.classList.contains("transide") ? dropdown.classList.remove("transide") : dropdown.classList.add("transide")
+
 
         })
+      })
 
 
     intro.style.top= window.pageYOffset + "px"
@@ -546,19 +574,19 @@ if(window.innerWidth < 970){
 
 menubtn.addEventListener("click",()=>{
     navlist.forEach((a)=>{
-        if(a.classList.contains("removelist")){
-            a.classList.remove("removelist")
-            menubtn.textContent='Hide'
-        navbar.classList.add("show")
-        navbar.classList.remove("hide")
+        // if(a.classList.contains("removelist")){
+        //     a.classList.remove("removelist")
+        //     menubtn.textContent='Hide'
+        // navbar.classList.add("show")
+        // navbar.classList.remove("hide")
 
-        }
-        else{
-            menubtn.textContent='SHOW'
-        a.classList.add("removelist")
-        navbar.classList.remove("show")
-        navbar.classList.add("hide")
-        }
+        // }
+        // else{
+        //     menubtn.textContent='SHOW'
+        // a.classList.add("removelist")
+        // navbar.classList.remove("show")
+        // navbar.classList.add("hide")
+        // }
     })
 
 })
@@ -623,14 +651,21 @@ window.addEventListener("scroll",()=>{
 }) 
 
 
+window.addEventListener("resize",()=>{
+     if(window.innerWidth <= 700 ){
+        dropdown.style.display='flex';
+        // navbar.style.visibility='hidden'
+    }
+    else if(window.innerWidth >= 700){
+        dropdown.style.display='none';3
+        // navbar.style.visibility='visible'
 
-if(window.innerWidth < 700 ){
-    navbar.classList.add("dropdown")
-}
-else{
-    navbar.classList.remove("dropdown")
-
-}
+        
+    }
+    else{
+        
+  }
+})
 
 </script>
 
