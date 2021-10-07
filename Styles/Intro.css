@@ -187,11 +187,10 @@ text-align: center;
 
 }
 .blog h1{
-    /* font-size: 3.1rem; */
+    
     text-decoration: underline;
-    /* color: rgb(14, 14, 47); */
-    /* color: rgba(245, 222, 179, 0.931); */
 }
+
 body::before{
     content: '';
     position: absolute;
